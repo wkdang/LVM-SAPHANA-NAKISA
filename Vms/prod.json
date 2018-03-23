@@ -472,8 +472,6 @@
             {
               "lun": 0,
               "createOption": "attach",
-              "caching": "None",
-			  "writeAcceleratorEnabled": true,
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-shared'))]"
               }
@@ -481,8 +479,6 @@
             {
               "lun": 1,
               "createOption": "attach",
-              "caching": "None",
-			  "writeAcceleratorEnabled": true,
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-sap'))]"
               }
@@ -497,8 +493,6 @@
             {
               "lun": 3,
               "createOption": "attach",
-              "caching": "None",
-			  "writeAcceleratorEnabled": true,
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-data1'))]"
               }
@@ -506,8 +500,6 @@
             {
               "lun": 4,
               "createOption": "attach",
-              "caching": "None",
-			  "writeAcceleratorEnabled": true,
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-data2'))]"
               }
@@ -515,8 +507,6 @@
             {
               "lun": 5,
               "createOption": "attach",
-              "caching": "None",
-			  "writeAcceleratorEnabled": true,
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-data3'))]"
               }
@@ -524,8 +514,6 @@
             {
               "lun": 6,
               "createOption": "attach",
-              "caching": "None",
-			  "writeAcceleratorEnabled": true,
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-data4'))]"
               }
