@@ -449,7 +449,7 @@
                         "value": "[variables('vmSize')]"
                     },
 					"ProdDeployment": {
-                        "value": "[variables('ProdDeployment')]"
+                        "value": "[parameters('ProdDeployment')]"
                     },
                     "IPAllocationMethod":{
                         "value": "[parameters('IPAllocationMethod')]"
@@ -511,7 +511,7 @@
                         "value": "[variables('vmSize')]"
                     },
 					"ProdDeployment": {
-                        "value": "[variables('ProdDeployment')]"
+                        "value": "[parameters('ProdDeployment')]"
                     },
                     "IPAllocationMethod":{
                         "value": "[parameters('IPAllocationMethod')]"
