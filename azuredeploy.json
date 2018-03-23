@@ -405,7 +405,7 @@
         }
       },
           { 
-            "condition": "[and(or(equals(variables('vmSize'),'Standard_M64s'),equals(variables('vmSize'),'Standard_E32s_v3')),equals(variables('ProdDeployment'),'no'))]",
+            "condition": "[and(or(equals(variables('vmSize'),'Standard_M64s'),equals(variables('vmSize'),'Standard_E32s_v3')),equals(parameters('ProdDeployment'),'no'))]",
             "apiVersion": "2016-09-01",
             "name": "[concat('NonProductionLinkedTemplate', parameters('VMName'))]",
             "type": "Microsoft.Resources/deployments",
@@ -467,7 +467,7 @@
             }
         },
         {
-            "condition": "[and(or(equals(variables('vmSize'),'Standard_M64s'),equals(variables('vmSize'),'Standard_E32s_v3')),equals(variables('ProdDeployment'),'yes'))]",
+            "condition": "[and(or(equals(variables('vmSize'),'Standard_M64s'),equals(variables('vmSize'),'Standard_E32s_v3')),equals(parameters('ProdDeployment'),'yes'))]",
             "apiVersion": "2016-09-01",
             "name":"[concat('ProductionLinkedTemplate', parameters('VMName'))]",
             "type": "Microsoft.Resources/deployments",
