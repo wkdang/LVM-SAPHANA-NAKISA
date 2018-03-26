@@ -437,8 +437,6 @@
       "properties": {
         "creationData": {
           "createOption": "Empty"
-		  "caching": "None",
-          "writeAcceleratorEnabled": true,
         },
         "diskSizeGB": "[variables('diskConfig').log3]"
       }
