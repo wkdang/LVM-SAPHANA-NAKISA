@@ -11,6 +11,11 @@ Machine Size | RAM | Data and Log Disks | /hana/shared | /root | /usr/sap | hana
 E32 | 256 GB | 2 x P20 | 1 x S20 | 1 x S6 | 1 x S6 | 1 x S20
 M64s | 1TB | 2 x P30 | 1 x S30 | 1 x P6 | 1 x S6 | 2 x S30
 
+## Non-Production vs Production Environment
+Deployment for Production will ensure to strip the correct number of disks in order meet the correct throughput required for SAP HANA scenario.
+400 Mb/s for /hana/data
+250 Mb/s for /hana/log
+
 ## Installation Media
 This template allows users to implement SAP HANA 1.0 or SAP HANA 2.0
 
