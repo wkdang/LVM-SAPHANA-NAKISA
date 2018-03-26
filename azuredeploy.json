@@ -52,7 +52,7 @@
                  "yes", 
                  "no" 
              ] 
-         } 
+         },
         "NetworkName": {
             "type": "string",
             "defaultValue": "ra-sap-hana-vnet",
