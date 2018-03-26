@@ -473,6 +473,9 @@
                     "StaticIP":{
                         "value": "[parameters('StaticIP')]"
                     },
+					"AutoShutdown": {
+					    "value": "[parameters('AutoShutdown')]"
+					},
 					"WriteAccelerator":{ 
                          "value": "[parameters('WriteAccelerator')]" 
                     }                    	     
@@ -539,6 +542,9 @@
 					"StaticIP":{
                         "value": "[parameters('StaticIP')]"
                     },
+					"AutoShutdown": {
+					    "value": "[parameters('AutoShutdown')]"
+					},
 					"WriteAccelerator":{ 
                          "value": "[parameters('WriteAccelerator')]" 
                     }
