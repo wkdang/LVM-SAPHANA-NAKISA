@@ -4,7 +4,7 @@
     "parameters": {
         "VMName": {
             "type": "string",
-			"defaultValue": "sapahanaarm",
+			"defaultValue": "lvewlin2hani",
             "metadata": {
                 "description": "VM Name"
             }
@@ -98,7 +98,7 @@
             "metadata": {
                 "description": "Username for the Virtual Machine"
             },
-            "defaultValue": "testuser"
+            "defaultValue": "claranet"
         },
         "VMPassword": {
             "type": "securestring",
@@ -114,7 +114,7 @@
             "defaultValue": "SLES for SAP 12 SP3",
             "allowedValues": [
                 "SLES for SAP 12 SP3",
-                "RHEL 7.4 for SAP HANA"
+                "RHEL 7.2 for SAP HANA"
             ]
         },
 		"HANAVers": {
@@ -134,7 +134,7 @@
             "metadata": {
                 "description": "SAP HANA System ID"
             },
-            "defaultValue": "H10"
+            "defaultValue": "IN1"
         },
         "HANANumber": {
             "type": "string",
@@ -170,7 +170,7 @@
             "metadata": {
                 "description": "Choose whether to acquire a public IP"
           },
-          "defaultValue": "yes"
+          "defaultValue": "no"
         },
 		"DnSName": {
             "type": "string",
@@ -196,7 +196,7 @@
             "metadata": {
                 "description": "Define an autoshutdown for your VM"
             },
-            "defaultValue": "yes"
+            "defaultValue": "no"
 
         }
 		
