@@ -190,7 +190,7 @@ if [ "$6" == "2.0" ]; then
   cd /hana/data/SapBits
   myhost=`hostname`
   sedcmd="s/REPLACE-WITH-HOSTNAME/$myhost/g"
-  sedcmd2="s/\/hana\/shared\/SapBits\/51053061/\/hana\/data\/SapBits\/51053061/g"
+  sedcmd2="s/\/hana\/shared\/sapbits\/51052325/\/hana\/data\/SapBits\/51053061/g"
   sedcmd3="s/root_user=root/root_user=$HANAUSR/g"
   sedcmd4="s/root_password=AweS0me@PW/root_password=$HANAPWD/g"
   sedcmd5="s/sid=H10/sid=$HANASID/g"
@@ -230,7 +230,7 @@ cd /hana/data/SapBits
 cd /hana/data/SapBits
 myhost=`hostname`
 sedcmd="s/REPLACE-WITH-HOSTNAME/$myhost/g"
-sedcmd2="s/\/hana\/shared\/SapBits\/51053061/\/hana\/data\/SapBits\/51052383/g"
+sedcmd2="s/\/hana\/shared\/sapbits\/51052325/\/hana\/data\/SapBits\/51052383/g"
 sedcmd3="s/root_user=root/root_user=$HANAUSR/g"
 sedcmd4="s/password=AweS0me@PW/password=$HANAPWD/g"
 sedcmd5="s/sid=H10/sid=$HANASID/g"
