@@ -43,16 +43,7 @@
                 "no"
             ]
         },
-		"WriteAccelerator": { 
-             "type": "string", 
-             "metadata": { 
-                 "description": "Choose whether to use Write Accelerator, only for M series" 
-             }, 
-             "allowedValues": [ 
-                 "yes", 
-                 "no" 
-             ] 
-         },
+
         "NetworkName": {
             "type": "string",
             "defaultValue": "ra-sap-hana-vnet",
@@ -475,10 +466,7 @@
                     },
 					"AutoShutdown": {
 					    "value": "[parameters('AutoShutdown')]"
-					},
-					"WriteAccelerator":{ 
-                         "value": "[parameters('WriteAccelerator')]" 
-                    }                    	     
+					}               	     
 
                 }
             }
@@ -544,10 +532,7 @@
                     },
 					"AutoShutdown": {
 					    "value": "[parameters('AutoShutdown')]"
-					},
-					"WriteAccelerator":{ 
-                         "value": "[parameters('WriteAccelerator')]" 
-                    }
+					}
                 }
             }
         },
