@@ -437,7 +437,7 @@
               "autoUpgradeMinorVersion": true,
               "settings": {
                 "fileUris": [
-                  "https://raw.githubusercontent.com/wkdang/TRAX-SAPHANA/master/scripts/nonprod.sh"
+                  "https://raw.githubusercontent.com/wkdang/LVM-SAPHANA-NAKISA/master/scripts/nonprod.sh"
                 ],
                 "commandToExecute": "[concat('sh nonprod.sh ', parameters('customUri'), ' ' , parameters('vmUserName'), ' ', parameters('vmPassword'),' ', parameters('HANASID'), ' ', parameters('HANANUMBER'), ' ', parameters('HANAVERS'), ' ', parameters('OperatingSystem'))]"
               }
