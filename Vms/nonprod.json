@@ -28,7 +28,7 @@
             "defaultValue": "SLES for SAP 12 SP3",
             "allowedValues": [
                 "SLES for SAP 12 SP3",
-                "RHEL 7.2 for SAP HANA"
+                "RHEL 7.4 for SAP HANA"
             ]
         },
         "vmUserName": {
@@ -76,6 +76,17 @@
             "metadata": {
                 "description": "Size of VM to deploy"
             }
+        },
+				"ProdDeployment": {
+            "type": "string",
+            "metadata": {
+                "description": "Production system deployment with recommended Disk Layout"
+            },
+            "defaultValue": "no",
+            "allowedValues": [
+                "yes",
+                "no"
+            ]
         },
         "IPAllocationMethod": {
             "type": "string",
@@ -134,16 +145,24 @@
         "OperatingSystemSpec":{
             "imagePublisher":"[if (contains(parameters('OperatingSystem'),'SLES'),'SUSE','RedHat')]",
             "imageOffer":"[if (contains(parameters('OperatingSystem'),'SLES'),'SLES-SAP','RHEL-SAP-HANA')]",
-            "sku":"[if (contains(parameters('OperatingSystem'),'12 SP3'),'12-SP3','7.2')]"
+            "sku":"[if (contains(parameters('OperatingSystem'),'12 SP3'),'12-SP3','7.4')]"
         },
         "diskConfig": "[variables(concat('diskConfig_', parameters('vmSize')))]",
-        "diskConfig_Standard_E16s_v3": {
+        "diskConfig_Standard_E32s_v3": {
             "shared": 255,
             "sap": 63,
-            "backup": 255,
+            "backup": 512,
             "data1": 511,
             "data2": 127
         },
+        "diskConfig_Standard_M64s": {
+            "shared": 1023,
+            "sap": 63,
+            "backup": 1023,
+            "backup2": 1023,
+            "data1": 1023,
+            "data2": 1023
+        }
       },
   "resources": [
 
