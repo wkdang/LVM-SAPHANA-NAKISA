@@ -28,7 +28,7 @@
             "defaultValue": "SLES for SAP 12 SP3",
             "allowedValues": [
                 "SLES for SAP 12 SP3",
-                "RHEL 7.4 for SAP HANA"
+                "RHEL 7.2 for SAP HANA"
             ]
         },
         "vmUserName": {
@@ -36,14 +36,14 @@
             "metadata": {
                 "description": "Username for the Virtual Machine"
             },
-            "defaultValue": "testuser"
+            "defaultValue": "claranet"
         },
         "vmPassword": {
             "type": "securestring",
             "metadata": {
                 "description": "Password for the Virtual Machine"
             },
-            "defaultValue": "Hana07061992!"
+            "defaultValue": "Wq793Vr67CTqZ9gp"
         },
 		"hanaVers": {
             "type": "string",
@@ -62,7 +62,7 @@
             "metadata": {
                 "description": "SAP HANA System ID"
             },
-            "defaultValue": "H10"
+            "defaultValue": "IN1"
         },
         "hanaNumber": {
             "type": "string",
@@ -145,7 +145,7 @@
         "OperatingSystemSpec":{
             "imagePublisher":"[if (contains(parameters('OperatingSystem'),'SLES'),'SUSE','RedHat')]",
             "imageOffer":"[if (contains(parameters('OperatingSystem'),'SLES'),'SLES-SAP','RHEL-SAP-HANA')]",
-            "sku":"[if (contains(parameters('OperatingSystem'),'12 SP3'),'12-SP3','7.4')]"
+            "sku":"[if (contains(parameters('OperatingSystem'),'12 SP3'),'12-SP3','7.2')]"
         },
         "diskConfig": "[variables(concat('diskConfig_', parameters('vmSize')))]",
         "diskConfig_Standard_E32s_v3": {
@@ -156,12 +156,11 @@
             "data2": 127
         },
         "diskConfig_Standard_M64s": {
-            "shared": 1023,
-            "sap": 63,
-            "backup": 1023,
-            "backup2": 1023,
-            "data1": 1023,
-            "data2": 1023
+            "shared": 256,
+            "sap": 128,
+            "backup": 512,
+            "data1": 768,
+            "data2": 384
         }
       },
   "resources": [
