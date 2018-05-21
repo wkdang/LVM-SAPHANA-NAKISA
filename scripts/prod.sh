@@ -208,7 +208,7 @@ if [ "$6" == "2.0" ]; then
   sedcmd="s/REPLACE-WITH-HOSTNAME/$myhost/g"
   sedcmd2="s/\/hana\/shared\/sapbits\/51052325/\/hana\/data\/SapBits\/51053061/g"
   sedcmd3="s/root_user=root/root_user=$HANAUSR/g"
-  sedcmd4="s/root_password=AweS0me@PW/root_password=$HANAPWD/g"
+  sedcmd4="s/AweS0me@PW/$HANAPWD/g"
   sedcmd5="s/sid=H10/sid=$HANASID/g"
   sedcmd6="s/number=00/number=$HANANUMBER/g"
   #cat hdbinst1.cfg | sed $sedcmd | sed $sedcmd2 | sed $sedcmd3 | sed $sedcmd4 | sed $sedcmd5 | sed $sedcmd6 > hdbinst-local.cfg
