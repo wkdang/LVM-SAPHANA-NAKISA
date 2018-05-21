@@ -134,17 +134,7 @@
             },
             "defaultValue": "yes"
 
-        },
-        "WriteAccelerator": { 
-             "type": "string", 
-             "metadata": { 
-                 "description": "Choose whether to use Write Accelerator, only for M series" 
-             }, 
-             "allowedValues": [ 
-                 "yes", 
-                 "no" 
-             ] 
-         } 
+        }
 
     },
     "variables": {
@@ -533,7 +523,7 @@
               "lun": 7,
               "createOption": "attach",
 			  "caching": "None",
- 			  "writeAcceleratorEnabled": "[if(equals(parameters('WriteAccelerator'),'yes'), 'true', 'false')]",
+ 			  "writeAcceleratorEnabled": "yes",
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-log1'))]"
               }
@@ -542,7 +532,7 @@
               "lun": 8,
               "createOption": "attach",
               "caching": "None",
- 			  "writeAcceleratorEnabled": "[if(equals(parameters('WriteAccelerator'),'yes'), 'true', 'false')]",
+ 			  "writeAcceleratorEnabled": "yes",
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-log2'))]"
               }
@@ -551,7 +541,7 @@
               "lun": 9,
               "createOption": "attach",
               "caching": "None",
- 			  "writeAcceleratorEnabled": "[if(equals(parameters('WriteAccelerator'),'yes'), 'true', 'false')]",
+ 			  "writeAcceleratorEnabled": "yes",
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-log3'))]"
               }
