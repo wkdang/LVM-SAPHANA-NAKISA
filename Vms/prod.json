@@ -139,7 +139,8 @@
     },
     "variables": {
         "api-version": "2017-06-01",
-        "api-version-vm": "2017-03-30",
+        "api-version-vm": "2017-12-01",
+		"api-version-disk": "2018-04-01",
         "mode": "Push",
         "nicName": "[if (equals(parameters('IPAllocationMethod'),'Static'), concat(parameters('vmName'),'-static'), concat(parameters('vmName'),'-dynamic'))]",
         "subnetRef": "[parameters('HANASubnetRef')]",
@@ -210,6 +211,7 @@
          "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmName'), '-IPPublic')]" 
 		 ], 
       "properties": {
+		 "enableAcceleratedNetworking": true,
         "ipConfigurations": [
           {
             "name": "[concat(parameters('vmName'),'-ipcfg')]",
@@ -237,6 +239,7 @@
          "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmName'), '-IPPublic')]" 
 		 ], 
       "properties": {
+		  "enableAcceleratedNetworking": true,
         "ipConfigurations": [
           {
             "name": "[concat(parameters('vmName'),'-ipcfg')]",
@@ -274,7 +277,7 @@
     {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-shared')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -290,7 +293,7 @@
     {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-sap')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -306,7 +309,7 @@
     {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-backup1')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Standard_LRS",
@@ -322,7 +325,7 @@
     {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-data1')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -338,7 +341,7 @@
     {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-data2')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -354,7 +357,7 @@
 	    {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-data3')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -370,7 +373,7 @@
 	    {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-data4')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -386,7 +389,7 @@
 	    {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-log1')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -402,7 +405,7 @@
 		    {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-log2')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Premium_LRS",
@@ -418,7 +421,7 @@
 		    {
       "type": "Microsoft.Compute/disks",
       "name": "[concat(parameters('vmName'),'-log3')]",
-      "apiVersion": "[variables('api-version-vm')]",
+      "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
 	  "sku": {
         "name": "Premium_LRS",
