@@ -391,18 +391,8 @@
 				
 
               }
-            },
-            {
-                "name": "[parameters('ManagementSubnetName')]",
-                "properties": {
-                  "addressPrefix": "[parameters('ManagementSubnetPrefix')]",
-				  "networkSecurityGroup": { 
-                  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]" 
-               }
-				  
-				  }
-              }
-          ]
+            }
+			]
         }
       },
           { 
