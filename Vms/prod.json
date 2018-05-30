@@ -28,7 +28,7 @@
             "defaultValue": "SLES for SAP 12 SP3",
             "allowedValues": [
                 "SLES for SAP 12 SP3",
-                "RHEL 7.2 for SAP HANA"
+                "RHEL 7.3 for SAP HANA"
             ]
         },
         "vmUserName": {
@@ -139,7 +139,7 @@
     },
     "variables": {
         "api-version": "2017-06-01",
-        "api-version-vm": "2017-03-30",
+        "api-version-vm": "2018-04-01",
 		"api-version-disk": "2018-04-01",
         "mode": "Push",
         "nicName": "[if (equals(parameters('IPAllocationMethod'),'Static'), concat(parameters('vmName'),'-static'), concat(parameters('vmName'),'-dynamic'))]",
@@ -147,7 +147,7 @@
         "OperatingSystemSpec":{
             "imagePublisher":"[if (contains(parameters('OperatingSystem'),'SLES'),'SUSE','RedHat')]",
             "imageOffer":"[if (contains(parameters('OperatingSystem'),'SLES'),'SLES-SAP','RHEL-SAP-HANA')]",
-            "sku":"[if (contains(parameters('OperatingSystem'),'12 SP3'),'12-SP3','7.2')]"
+            "sku":"[if (contains(parameters('OperatingSystem'),'12 SP3'),'12-SP3','7.3')]"
         },
         "diskConfig": "[variables(concat('diskConfig_', parameters('vmSize')))]",
         "diskConfig_Standard_E32s_v3": {
