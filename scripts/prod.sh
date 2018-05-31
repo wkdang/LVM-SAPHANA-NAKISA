@@ -66,7 +66,7 @@ if [ "$7" == "RHEL" ]; then
 	chmod 755 /usr/bin/unrar 
 	echo "End RAR" >> /tmp/parameter.txt
 	echo "End REHL prerequisite" >> /tmp/parameter.txt
-	
+	yum -y install lvm2
 else
 #install hana prereqs
 	sudo zypper install -y glibc-2.22-51.6
