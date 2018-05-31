@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 
 Uri=$1
 HANAUSR=$2
@@ -17,6 +17,10 @@ echo $4 >> /tmp/parameter.txt
 echo $5 >> /tmp/parameter.txt
 echo $6 >> /tmp/parameter.txt
 echo $7 >> /tmp/parameter.txt
+
+	sudo mkdir -p /hana/{data,log,shared,backup}
+	sudo mkdir /usr/sap
+	sudo mkdir -p /hana/data/{SapBitslocal,SapBits}
 
 if [ "$7" == "RHEL" ]; then
 	echo "Start REHL prerequisite" >> /tmp/parameter.txt
