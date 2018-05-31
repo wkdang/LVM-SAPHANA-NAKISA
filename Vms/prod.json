@@ -312,8 +312,8 @@
       "apiVersion": "[variables('api-version-disk')]",
       "location": "[resourceGroup().location]",
       "sku": {
-        "name": "Standard_LRS",
-        "tier": "Standard"
+        "name": "Premium_LRS",
+        "tier": "Premium"
       },
       "properties": {
         "creationData": {
