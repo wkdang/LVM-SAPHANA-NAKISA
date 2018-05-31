@@ -18,6 +18,8 @@ echo $5 >> /tmp/parameter.txt
 echo $6 >> /tmp/parameter.txt
 echo $7 >> /tmp/parameter.txt
 
+sed -i -e "s/Defaults    requiretty/#Defaults    requiretty/g" /etc/sudoers
+
 	sudo mkdir -p /hana/{data,log,shared,backup}
 	sudo mkdir /usr/sap
 	sudo mkdir -p /hana/data/{SapBitslocal,SapBits}
