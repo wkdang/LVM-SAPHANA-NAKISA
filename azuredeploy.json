@@ -114,7 +114,7 @@
             "defaultValue": "SLES for SAP 12 SP3",
             "allowedValues": [
                 "SLES for SAP 12 SP3",
-                "RHEL 7.3 for SAP HANA"
+                "RHEL 7.2 for SAP HANA"
             ]
         },
 		"HANAVers": {
