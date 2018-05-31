@@ -211,7 +211,7 @@
          "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmName'), '-IPPublic')]" 
 		 ], 
       "properties": {
-
+       "enableAcceleratedNetworking": true,
         "ipConfigurations": [
           {
             "name": "[concat(parameters('vmName'),'-ipcfg')]",
@@ -239,7 +239,7 @@
          "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmName'), '-IPPublic')]" 
 		 ], 
       "properties": {
-
+       "enableAcceleratedNetworking": true,
         "ipConfigurations": [
           {
             "name": "[concat(parameters('vmName'),'-ipcfg')]",
@@ -526,7 +526,7 @@
             {
               "lun": 7,
               "createOption": "attach",
- 			  "writeAcceleratorEnabled": "false",
+ 			  "writeAcceleratorEnabled": "true",
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-log1'))]"
               }
@@ -534,7 +534,7 @@
             {
               "lun": 8,
               "createOption": "attach",
- 			  "writeAcceleratorEnabled": "false",
+ 			  "writeAcceleratorEnabled": "true",
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-log2'))]"
               }
@@ -542,7 +542,7 @@
 			{
               "lun": 9,
               "createOption": "attach",
- 			  "writeAcceleratorEnabled": "false",
+ 			  "writeAcceleratorEnabled": "true",
 			  "managedDisk": {
                 "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('vmName'),'-log3'))]"
               }
