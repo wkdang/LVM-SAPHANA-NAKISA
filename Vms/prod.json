@@ -578,7 +578,7 @@
                 "fileUris": [
                   "https://raw.githubusercontent.com/wkdang/LVM-SAPHANA-NAKISA/master/scripts/prod.sh"
                 ],
-                "commandToExecute": "[concat('sh prod.sh ', parameters('customUri'), ' ' , parameters('vmUserName'), ' ', parameters('vmPassword'),' ', parameters('HANASID'), ' ', parameters('HANANUMBER'), ' ', parameters('HANAVERS'), ' ', parameters('OperatingSystem'))]"
+                "commandToExecute": "[concat('sh -t prod.sh ', parameters('customUri'), ' ' , parameters('vmUserName'), ' ', parameters('vmPassword'),' ', parameters('HANASID'), ' ', parameters('HANANUMBER'), ' ', parameters('HANAVERS'), ' ', parameters('OperatingSystem'))]"
               }
             }
           }
