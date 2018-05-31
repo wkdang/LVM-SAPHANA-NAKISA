@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+
 
 Uri=$1
 HANAUSR=$2
@@ -265,4 +265,4 @@ echo "install hana 1.0 end" >> /tmp/parameter.txt
 
 fi
 
-shutdown -r 1 now
+#shutdown -r 1 now
