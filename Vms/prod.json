@@ -211,7 +211,7 @@
          "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmName'), '-IPPublic')]" 
 		 ], 
       "properties": {
-       "enableAcceleratedNetworking": true,
+       "enableAcceleratedNetworking": false,
         "ipConfigurations": [
           {
             "name": "[concat(parameters('vmName'),'-ipcfg')]",
@@ -239,7 +239,7 @@
          "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmName'), '-IPPublic')]" 
 		 ], 
       "properties": {
-       "enableAcceleratedNetworking": true,
+       "enableAcceleratedNetworking": false,
         "ipConfigurations": [
           {
             "name": "[concat(parameters('vmName'),'-ipcfg')]",
